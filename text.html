@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Porsche — 911 GT3</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <div class="nav-logo" onclick="showPage('home')">
+        <div class="logo-hex"></div>
+        <span class="nav-brand">Porsche</span>
+    </div>
+    <ul class="nav-links">
+        <li><a id="n-home" onclick="showPage('home')" class="active">Homepage</a></li>
+        <li><a id="n-model" onclick="showPage('model')">Model Page</a></li>
+        <li><a id="n-features" onclick="showPage('features')">Features</a></li>
+        <li><a id="n-about" onclick="showPage('about')">About</a></li>
+        <li><a id="n-timeline" onclick="showPage('timeline')">Timeline</a></li>
+    </ul>
+</nav>
+
+<div id="page-home" class="page active">
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-title fu">911 GT3</div>
+            <p class="hero-sub fu d1">The ultimate driving machine. Precision engineered for performance.</p>
+            <button class="btn-red fu d2" onclick="showPage('model')">EXPLORE</button>
+        </div>
+    </section>
+
+    <section class="stats-row">
+        <div class="stat-col">
+            <span class="stat-num" data-target="503">0</span>
+            <span class="stat-label">Horsepower</span>
+        </div>
+        <div class="stat-col">
+            <span class="stat-num">3.2</span>
+            <span class="stat-label">0–60 MPH (Seconds)</span>
+        </div>
+        <div class="stat-col">
+            <span class="stat-num" data-target="198">0</span>
+            <span class="stat-label">Top Speed (MPH)</span>
+        </div>
+    </section>
+</div>
+
+<div id="page-model" class="page">
+    <div class="model-hero-wrap">
+        <h1 class="model-h1">PORSCHE 911</h1>
+        <p class="model-sub">Trending lineup—built for precision, tuned for control, and ready for the next corner.</p>
+
+        <div class="model-cols">
+            <div class="model-media">
+                <div class="model-main-img" style="background-image:url('https://images.unsplash.com/photo-1696581082096-46920c350c61?w=1080&auto=format&fit=crop&q=60')"></div>
+
+                <div class="model-car-row">
+                    <button class="model-car" type="button" data-car-title="911 GT3 RS" data-car-price="$199,900" data-car-img="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&auto=format&fit=crop&q=60">
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&auto=format&fit=crop&q=60" alt="911 GT3 RS"/>
+                        <div class="model-car-name">911 GT3 RS</div>
+                    </button>
+                    <button class="model-car" type="button" data-car-title="Taycan Turbo S" data-car-price="$185,000" data-car-img="https://images.unsplash.com/photo-1504215680853-026ed2a45def?w=1200&auto=format&fit=crop&q=60">
+                        <img src="https://images.unsplash.com/photo-1504215680853-026ed2a45def?w=600&auto=format&fit=crop&q=60" alt="Taycan Turbo S"/>
+                        <div class="model-car-name">Taycan Turbo S</div>
+                    </button>
+                    <button class="model-car" type="button" data-car-title="Cayman GT4" data-car-price="$104,000" data-car-img="https://images.unsplash.com/photo-1696581082096-46920c350c61?w=1200&auto=format&fit=crop&q=60">
+                        <img src="https://images.unsplash.com/photo-1696581082096-46920c350c61?w=600&auto=format&fit=crop&q=60" alt="Cayman GT4"/>
+                        <div class="model-car-name">Cayman GT4</div>
+                    </button>
+                </div>
+            </div>
+
+            <div class="model-r">
+                <div class="model-variant" aria-live="polite">CARRERA 4S</div>
+                <p class="model-desc">The 911 is engineered like a performance instrument—every vibration, airflow path, and drivetrain response designed to feel effortless at speed.</p>
+                <hr class="divider">
+                <div class="model-spec">
+                    <div>
+                        <div class="price-label">Starting At</div>
+                        <div class="model-price">$137,950</div>
+                    </div>
+                    <div class="spec-pill">
+                        <div class="spec-pill-num">443</div>
+                        <div class="spec-pill-lbl">HP</div>
+                    </div>
+                    <div class="spec-pill">
+                        <div class="spec-pill-num">3.2</div>
+                        <div class="spec-pill-lbl">0–60s</div>
+                    </div>
+                </div>
+
+                <div class="model-actions">
+                    <button class="buy-btn" onclick="showBuyModal()">BUY NOW</button>
+                    <button class="ghost-btn" onclick="showPage('features')">EXPLORE FEATURES</button>
+                </div>
+
+                <div class="model-note">Select a trending car above to update the hero image and pricing instantly.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="specs-wrap">
+        <h2 class="specs-h2">Specifications</h2>
+        <div class="specs-grid">
+            <div class="spec-row"><span class="sk">0–60 MPH</span><span class="sv red">3.2 Seconds</span></div>
+            <div class="spec-row"><span class="sk">Top Speed</span><span class="sv red">191 MPH</span></div>
+            <div class="spec-row"><span class="sk">Horsepower</span><span class="sv red">443 HP</span></div>
+            <div class="spec-row"><span class="sk">Transmission</span><span class="sv">8-Speed PDK</span></div>
+        </div>
+
+        <div class="specs-photo-strip">
+            <div class="specs-photo">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&auto=format&fit=crop&q=60" alt="911 GT3 RS"/>
+                <div class="specs-photo-title">911 GT3 RS</div>
+            </div>
+            <div class="specs-photo">
+                <img src="https://images.unsplash.com/photo-1504215680853-026ed2a45def?w=600&auto=format&fit=crop&q=60" alt="Taycan Turbo S"/>
+                <div class="specs-photo-title">Taycan Turbo S</div>
+            </div>
+            <div class="specs-photo">
+                <img src="https://www.slashgear.com/img/gallery/the-12-best-looking-porsche-models-ever-designed/porsche-carrera-gt-1716593109.webp"/>
+                <div class="specs-photo-title">Porsche Carrera GT</div>
+            </div>
+        </div>
+
+        <button class="buy-btn" onclick="showBuyModal()">BUY NOW</button>
+    </div>
+</div>
+
+<div id="page-features" class="page">
+    <div class="feat-header"><h1 class="page-h1">FEATURES</h1></div>
+
+    <div class="feat-grid">
+        <div class="trend-car">
+            <div class="trend-img" style="background-image:url('https://images.unsplash.com/photo-1752038345226-f2b48c07967d?w=1920&auto=format&fit=crop&q=60')"></div>
+            <div class="trend-body">
+                <div class="trend-tag">Trending</div>
+                <div class="trend-title">911 GT3 RS</div>
+                <div class="trend-desc">Track-bred aerodynamics + responsive handling for maximum grip.</div>
+            </div>
+        </div>
+
+        <div class="trend-car">
+            <div class="trend-img" style="background-image:url('https://www.supercars.net/blog/wp-content/uploads/2024/10/2025-Porsche-Macan-Turbo-003-2100-2048x1536.jpg')"></div>
+            <div class="trend-body">
+                <div class="trend-tag">Trending</div>
+                <div class="trend-title">2025 Porsche Macan EV</div>
+                <div class="trend-desc">Electric performance, confident handling, and modern Porsche design.</div>
+            </div>
+        </div>
+
+        <div class="trend-car">
+            <div class="trend-img" style="background-image:url('https://images.unsplash.com/photo-1504215680853-026ed2a45def?w=1200&auto=format&fit=crop&q=60')"></div>
+            <div class="trend-body">
+                <div class="trend-tag">Trending</div>
+                <div class="trend-title">Taycan Turbo S</div>
+                <div class="trend-desc">Instant torque and sleek stability—electric power, Porsche control.</div>
+            </div>
+        </div>
+    </div>
+
+    <button class="config-btn" onclick="showPage('model')">CONFIGURE YOUR 911</button>
+</div>
+
+<div id="page-about" class="page">
+    <div class="about-block">
+        <h2>ABOUT</h2>
+        <p class="about-quote">“<span class="q">Design is not just what you see</span> — it’s what you feel at speed.”</p>
+        <div class="about-grid">
+            <div class="about-chip">
+                <h3>Crafted to move</h3>
+                <p>Every curve and surface is tuned for balance—so the car stays planted when the road gets serious.</p>
+            </div>
+            <div class="about-chip">
+                <h3>Engineering with purpose</h3>
+                <p>From suspension to aerodynamics, performance is treated as a system—not a single feature.</p>
+            </div>
+            <div class="about-chip">
+                <h3>Built for drivers</h3>
+                <p>The 911 is a conversation between machine and mind—responsive, confident, and unmistakably Porsche.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="page-timeline" class="page">
+    <div class="tl-header"><h1 class="tl-h1">PROJECT TIMELINE</h1></div>
+    <div class="gantt-wrap">
+        <table class="gantt">
+            <thead>
+                <tr>
+                    <th class="th-task">Task</th>
+                    <th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th><th>Jul</th><th>Aug</th><th>Sep</th><th>Oct</th><th>Nov</th><th>Dec</th>
+                </tr>
+            </thead>
+            <tbody id="gantt-body"></tbody>
+        </table>
+    </div>
+</div>
+
+<div id="buy-modal" class="modal-overlay">
+    <div class="modal-content">
+        <div class="modal-title">ORDER YOUR 911</div>
+        <input id="modal-name" type="text" placeholder="Full Name" class="modal-input">
+        <input id="modal-email" type="email" placeholder="Email Address" class="modal-input">
+        <button onclick="submitOrder()" class="modal-btn-submit">SUBMIT ORDER</button>
+        <button onclick="closeModal()" class="modal-btn-cancel">CANCEL</button>
+    </div>
+</div>
+
+<footer class="site-footer">
+    <span class="fc">© 2026 Porsche AG.</span>
+</footer>
+
+<script src="functions.js"></script>
+</body>
+</html>
