@@ -1,0 +1,5 @@
+- [ ] Rename function.js -> functions.js (so Vercel/static routing serves the JS reliably)
+- [ ] Update text.html to use script src="functions.js"
+- [ ] Commit + push to GitHub
+- [ ] Redeploy on Vercel
+- [ ] Verify on deployed URL: buttons work + modal opens
